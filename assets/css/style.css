@@ -53,9 +53,10 @@ body {
 .crystal{
   width: 24%;
   display: inline;
-  padding: 9px;
   margin-bottom: 14px;
   margin-top: 14px;
+  border: 12px solid rgb(34,124,91);
+  border-radius: 20px;
 }
 
 .box5{
