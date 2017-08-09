@@ -3,14 +3,21 @@
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Saira Condensed', sans-serif;
     font-weight: 500;
     background-image: url("../images/congruent_pentagon.png");
+    text-shadow: 2px 2px 2px #ccc;
 }
 
 .box{
   box-shadow: 0 14px 28px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0  rgba(0,0,0,.12);
   border-radius: 24px;
+}
+
+.row{
+  border-left: 9px solid rgb(34,124,91);
+  padding: 14px;
+  border-radius: 20px;
 }
 
 
@@ -22,31 +29,32 @@ body {
   margin-bottom: 14px;
   padding-left: 5px;
   font-style: oblique;
+  text-shadow: 4px 4px 4px rgb(52,183,135);
 }
 
 .box2{
   background-color: rgb(132,188,92);
-  width: 70%;
-  padding: 9px;
+  padding: 14px;
   margin-bottom: 14px;
 }
 
 .box3, .box4, .box6, .box7{
   height: 78px;
   margin-bottom: 14px;
-  padding-left: 9px;
+  padding-left: 14px;
 }
 
 .box3, .box6, .box7{
   background-color: rgb(60,178,135);
-  padding-left: 9px;
-  padding-top: 9px;
+  padding-left: 16px;
+  padding-top: 10px;
 }
 
 .box4{
   background-color: rgb(188,159,92);
   line-height: 75%;
   text-align: justify;
+  padding-left: 19px;
   padding-top: 14px;
 }
 
@@ -65,7 +73,7 @@ body {
 }
 
 .box5:first-child{
-    padding-left: 14px;
+  padding-left: 14px;
 }
 
 .box6, .box7{
