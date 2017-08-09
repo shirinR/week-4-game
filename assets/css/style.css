@@ -15,6 +15,8 @@ body {
 }
 
 .row{
+  margin-top: 15px;
+  margin-bottom: 15px;
   border-left: 9px solid rgb(34,124,91);
   padding: 14px;
   border-radius: 20px;
