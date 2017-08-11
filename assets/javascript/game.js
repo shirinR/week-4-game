@@ -43,45 +43,52 @@ $(document).ready(function(){
 
   $('#computerGuess').html('<strong><h3>Computer guess: ' + computerGuess + '</h3></strong>');
 
+  var crystalNum1 = crystal1();
+  var crystalNum2 = crystal2();
+  var crystalNum3 = crystal3();
+  var crystalNum4 = crystal4();
+
   $("#crystal1").on("click",function(){
 
-    var crystalNum1 = crystal1();
+    // var crystalNum1 = crystal1();
     totalScore += crystalNum1;
-    // console.log('cc ' + cc);
-    // console.log('totalScore ' + totalScore);
+    console.log('cc ' + crystalNum1);
+    console.log('totalScore ' + totalScore);
 
-    $("#guessValue").html('<p><strong><h1>' + totalScore+ '</h1></strong></p>');
+    $("#guessValue").html('<p id="guessValue"><strong><h1>' + totalScore+ '</h1></strong></p>');
   });
 
   $("#crystal2").on("click",function(){
 
-    var crystalNum2 = crystal2();
+    // var crystalNum2 = crystal2();
     totalScore += crystalNum2;
 
-    $("#guessValue").html('<p><strong><h1>' + totalScore+ '</h1></strong></p>');
+    $("#guessValue").html('<p id="guessValue"><strong><h1>' + totalScore+ '</h1></strong></p>');
   });
 
   $("#crystal3").on("click",function(){
 
-    var crystalNum3 = crystal3();
+    // var crystalNum3 = crystal3();
     totalScore += crystalNum3;
 
-    $("#guessValue").html('<p><strong><h1>' + totalScore+ '</h1></strong></p>');
+    $("#guessValue").html('<p id="guessValue"><strong><h1>' + totalScore+ '</h1></strong></p>');
   });
 
   $("#crystal4").on("click",function(){
 
-    var crystalNum4 = crystal4();
+    // var crystalNum4 = crystal4();
     totalScore += crystalNum4;
 
-    $("#guessValue").html('<p><strong><h1>' + totalScore+ '</h1></strong></p>');
+    $("#guessValue").html('<p id="guessValue"><strong><h1>' + totalScore+ '</h1></strong></p>');
   });
 
-  if (totalScore===computerGuess()){
+  if (totalScore===computerGuess) {
     wins++;
     $("#wins").html('<p>Wins: ' + wins + '</p>');
-    $("#status").html('<p><strong>Status >> WIN!!!! </strong></p>');
-  }else{
+    $("#status").html('<p ><strong>Status >> WIN!!!! </strong></p>');
+
+  } else {
+
     losses++;
     $("#losses").html('<p>Losses: ' + losses + '</p>');
     $("#status").html('<p><strong>Status >> LOST!!!! </strong></p>');
