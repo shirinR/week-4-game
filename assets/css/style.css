@@ -22,16 +22,16 @@ body {
   font-size: 15px;
 }
 
-
 .box1{
   background-color: rgb(133,215,169);
   padding-top: 1px;
   padding-bottom: 1px;
-  text-align: justify;
+  text-align: center;
   margin-bottom: 14px;
   padding-left: 5px;
   font-style: oblique;
   text-shadow: 4px 4px 4px rgb(52,183,135);
+  font-size: 20px;
 }
 
 .box2{
@@ -41,7 +41,7 @@ body {
   font-size: 13px;
 }
 
-.box3, .box4, .box6, .box7{
+.box3, .box4, .box7{
   height: 78px;
   margin-bottom: 14px;
   padding-left: 14px;
@@ -78,16 +78,23 @@ body {
 }
 
 .box5:first-child{
-  padding-left: 14px;
+  padding-left: 13px;
 }
 
 .box6, .box7{
-  width: 45%;
+  width: 35%;
 }
 
 .box6{
   background-color: rgb(141,223,204);
+  height: 35px;
+  margin-bottom: 7px;
+  padding-left: 14px;
 }
+
+/*#totalScore {
+  font-size: 21px;
+}*/
 
 .box7{
   height: 120px;
