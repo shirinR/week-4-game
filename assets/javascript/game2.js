@@ -6,6 +6,10 @@ window.onload = function() {
     wins: 0,
     losses: 0,
 
+    randomIntFromInterval: function(min,max){
+      return Math.floor(Math.random()*(max-min+1)+min);
+    },
+
     computerGuess: function(){
       return crystalGame.randomIntFromInterval(19,120);
     },
@@ -21,12 +25,10 @@ window.onload = function() {
     crystal4: function(){
       return crystalGame.randomIntFromInterval(1,12);
     },
-    randomIntFromInterval: function(min,max){
-      return Math.floor(Math.random()*(max-min+1)+min);
-    },
 
     resetvalue: function(){
       console.log('RESET!!!!!');
+      alert('Wait for 1 Second to RESET');
       crystalGame.totalScore = 0;
       crystalGame.wins = 0;
       crystalGame.losses = 0;
@@ -35,37 +37,41 @@ window.onload = function() {
       crystalNum2 = crystalGame.crystal2();
       crystalNum3 = crystalGame.crystal3();
       crystalNum4 = crystalGame.crystal4();
-      $("#status").html('<p><strong>Status >> </strong></p>');
+      $("#status").html('<strong>Status >> </strong>');
       $("#wins").html('<p>Wins: 0</p>');
       $("#losses").html('<p>Losses: 0</p>');
-      $("#guessValue").html('<p id="guessValue"><strong>0</strong></p>');
-      $('#computerGuess').html('<strong><h3>Computer guess: ' + crystalGame.computerGuess() + '</h3></strong>');
-      finished = false;
+      $("#guessValue").html('<strong>0</strong>');
+      $('#computerGuess').html('<strong>Computer guess: ' + crystalGame.computerGuess() + '</strong>');
+      // finished = false;
+      alert('LET\'S START FRESH AGAIN');
     },
 
     compareResults: function(){
+      console.log('compareResults function');
       if (totalScore === crystalGame.computerGuess()) {
+        console.log('win++');
         crystalGame.wins++;
         $("#wins").html('<p>Wins: ' + crystalGame.wins + '</p>');
-        $("#status").html('<p ><strong>Status >> WIN!!!! </strong></p>');
+        $("#status").html('<strong>Status >> WIN!!!! </strong>');
+        console.log('WIN!!!!!')
         finished = true
         setTimeout(function () {
           crystalGame.resetvalue();
-        }, 3000);
-        alert('WIN!!!!!')
+          finished = false
+        }, 1000);
 
       } else if (totalScore > crystalGame.computerGuess()){
-
+        console.log('losses++');
         crystalGame.losses++;
         $("#losses").html('<p>Losses: ' + crystalGame.losses + '</p>');
-        $("#status").html('<p><strong>Status >> LOST!!!! </strong></p>');
-        // alert('LOST!!!!!')
+        $("#status").html('<strong>Status >> LOST!!!! </strong>');
+        console.log('LOST!!!!!')
         finished = true
         setTimeout(function () {
           crystalGame.resetvalue();
-        }, 3000);
-        alert('LOST!!!!!')
-        
+          finished = false
+        }, 1000);
+
       } else {
         console.log('Keep guessing!');
       }
@@ -79,7 +85,7 @@ window.onload = function() {
       return
     }
     totalScore += crystalNum1;
-    $("#guessValue").html('<p id="guessValue"><strong><h1>' + totalScore+ '</h1></strong></p>');
+    $("#guessValue").html('<strong>' + totalScore+ '</strong>');
     crystalGame.compareResults();
   });
   $("#crystal2").click(function(){
@@ -87,7 +93,7 @@ window.onload = function() {
       return
     }
     totalScore += crystalNum2;
-    $("#guessValue").html('<p id="guessValue"><strong><h1>' + totalScore+ '</h1></strong></p>');
+    $("#guessValue").html('<strong>' + totalScore+ '</strong>');
     crystalGame.compareResults();
   });
   $("#crystal3").click(function(){
@@ -95,7 +101,7 @@ window.onload = function() {
       return
     }
     totalScore += crystalNum3;
-    $("#guessValue").html('<p id="guessValue"><strong><h1>' + totalScore+ '</h1></strong></p>');
+    $("#guessValue").html('<strong>' + totalScore+ '</strong>');
     crystalGame.compareResults();
   });
   $("#crystal4").click(function(){
@@ -103,7 +109,7 @@ window.onload = function() {
       return
     }
     totalScore += crystalNum4;
-    $("#guessValue").html('<p id="guessValue"><strong><h1>' + totalScore+ '</h1></strong></p>');
+    $("#guessValue").html('<strong>' + totalScore+ '</strong>');
     crystalGame.compareResults();
   });
 

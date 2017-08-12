@@ -32,7 +32,6 @@ body {
   padding-left: 5px;
   font-style: oblique;
   text-shadow: 4px 4px 4px rgb(52,183,135);
-  font-size: 20px;
 }
 
 .box2{
@@ -42,14 +41,23 @@ body {
   font-size: 13px;
 }
 
+.box3{
+  font-size: 20px;
+  /*padding-top: 22px;*/
+}
+
+#computerGuess{
+  padding-top: 9px;
+  font-size: 24px;
+}
+
 .box3, .box4, .box7{
   height: 78px;
-  margin-bottom: 14px;
+  margin-bottom: 11px;
   padding-left: 14px;
 }
 
 .box3, .box6, .box7{
-  padding-left: 16px;
   padding-top: 10px;
 }
 
@@ -61,7 +69,7 @@ body {
   line-height: 75%;
   text-align: justify;
   padding-left: 19px;
-  padding-top: 14px;
+  padding-top: 12px;
 }
 
 .crystal{
@@ -83,21 +91,26 @@ body {
 }
 
 .box6, .box7{
-  width: 35%;
+  width: 28%;
+  font-size: 20px;
+  padding-left: 16px;
 }
 
 .box6{
   background-color: rgb(141,223,204);
-  height: 35px;
+  height: 47px;
   margin-bottom: 7px;
   padding-left: 14px;
 }
 
 #guessValue{
-  font-size: 37px;
+  font-size: 46px;
+  text-align: center;
+  padding-top: 7px;
+  padding-right: 25px;
 }
 
 .box7{
-  height: 120px;
+  height: 115px;
   background-color: rgb(156,242,209);
 }

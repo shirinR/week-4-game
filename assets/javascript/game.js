@@ -31,42 +31,42 @@ $(document).ready(function(){
   {
     return Math.floor(Math.random()*(max-min+1)+min);
   }
-  $('#computerGuess').html('<strong><h3>Computer guess: ' + computerGuess + '</h3></strong>');
+  $('#computerGuess').html('<strong>Computer guess: ' + computerGuess + '</strong>');
   var crystalNum1 = crystal1();
   var crystalNum2 = crystal2();
   var crystalNum3 = crystal3();
   var crystalNum4 = crystal4();
   $("#crystal1").click(function(){
     totalScore += crystalNum1;
-    $("#guessValue").html('<p id="guessValue"><strong><h1>' + totalScore+ '</h1></strong></p>');
+    $("#guessValue").html('<strong>' + totalScore+ '</strong>');
     compareResults();
   });
   $("#crystal2").click(function(){
     totalScore += crystalNum2;
-    $("#guessValue").html('<p id="guessValue"><strong><h1>' + totalScore+ '</h1></strong></p>');
+    $("#guessValue").html('<strong>' + totalScore+ '</strong>');
     compareResults();
   });
   $("#crystal3").click(function(){
     totalScore += crystalNum3;
-    $("#guessValue").html('<p id="guessValue"><strong><h1>' + totalScore+ '</h1></strong></p>');
+    $("#guessValue").html('<strong>' + totalScore+ '</strong>');
     compareResults();
   });
   $("#crystal4").click(function(){
     totalScore += crystalNum4;
-    $("#guessValue").html('<p id="guessValue"><strong><h1>' + totalScore+ '</h1></strong></p>');
+    $("#guessValue").html('<strong>' + totalScore+ '</strong>');
     compareResults();
   });
   function compareResults(){
     if (totalScore === computerGuess) {
       wins++;
       $("#wins").html('<p>Wins: ' + wins + '</p>');
-      $("#status").html('<p ><strong>Status >> WIN!!!! </strong></p>');
+      $("#status").html('<strong>Status >> WIN!!!! </strong>');
       alert('WIN!!!!!')
       resetvalue();
     } else if (totalScore > computerGuess){
       losses++;
       $("#losses").html('<p>Losses: ' + losses + '</p>');
-      $("#status").html('<p><strong>Status >> LOST!!!! </strong></p>');
+      $("#status").html('<strong>Status >> LOST!!!! </strong>');
       alert('LOST!!!!!')
       resetvalue();
     } else {
@@ -83,10 +83,10 @@ $(document).ready(function(){
     crystalNum2 = crystal2();
     crystalNum3 = crystal3();
     crystalNum4 = crystal4();
-    $("#status").html('<p><strong>Status >> </strong></p>');
+    $("#status").html('<strong>Status >> </strong>');
     $("#wins").html('<p>Wins: 0</p>');
     $("#losses").html('<p>Losses: 0</p>');
-    $("#guessValue").html('<p id="guessValue"><strong>0</strong></p>');
-    $('#computerGuess').html('<strong><h3>Computer guess: ' + computerGuess + '</h3></strong>');
+    $("#guessValue").html('<strong>0</strong>');
+    $('#computerGuess').html('<strong>Computer guess: ' + computerGuess + '</strong>');
   };
 });
