@@ -20,6 +20,7 @@ body {
   border-radius: 20px;
   font-family: 'Oswald', sans-serif;
   font-size: 15px;
+  color: #304484;
 }
 
 .box1{
@@ -92,9 +93,9 @@ body {
   padding-left: 14px;
 }
 
-/*#totalScore {
-  font-size: 21px;
-}*/
+#guessValue{
+  font-size: 37px;
+}
 
 .box7{
   height: 120px;
